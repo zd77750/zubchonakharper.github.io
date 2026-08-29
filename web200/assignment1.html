@@ -9,6 +9,8 @@
 
     <h1>WEB 200 - Assignment #1</h1>
 
+    <p id="timeofday">This is the Inner HTML for Time of Day.</p>
+
     <p id="demo">This is the Inner HTML</p>
 
 <script>
@@ -21,6 +23,17 @@
 
     window.alert("Hello World! Welcome to my WEB 200 - Assignment #1 Page.");
 
+    <!--EXTRA CREDIT-->
+    
+    if (new Date().getHours() < 24) {
+  document.getElementById("timeofday").innerHTML = "Good Evening!";
+}
+if (new Date().getHours() < 18) {
+  document.getElementById("timeofday").innerHTML = "Good Afternoon!";
+}
+if (new Date().getHours() < 12) {
+  document.getElementById("timeofday").innerHTML = "Good Morning!";
+}
 </script>
 </body>
 </html>
