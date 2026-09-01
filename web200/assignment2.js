@@ -28,3 +28,10 @@ document.getElementById("intro").innerHTML= studentFullName + "'s personal intro
 document.getElementById('myButton').onclick = function() {
     document.getElementById('myButton').alert = "James Hetfield is hiding under your bed, waiting for the Sandman to Enter the room. DO NOT PANIC."
 }
+
+if (new Date().getHours() < 21) {
+  document.getElementById("bedTime").innerHTML = "<h2>GO TO BED, OR ELSE JAMES HETFIELD WILL WATCH YOU SLEEP </h2>";
+}
+if (new Date().getHours() < 7) {
+  document.getElementById("bedTime").innerHTML = "<h2>GOOD DAY TO YOU! NO SIGHT OF JAMES HETFIELD</h2>";
+}
