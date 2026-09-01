@@ -17,9 +17,9 @@
 
 <script>
 
-    document.write("<p>Hello, Mr.Zubchonak. How can I assist you today?<p>");
+    document.write("Hello, Mr.Zubchonak. How can I assist you today?");
 
-    document.getElementById("demo").innerHTML="Welcome, Daniel Zubchonak.";
+    document.getElementById("demo").innerHTML="<h3>Welcome, Daniel Zubchonak.</h3>";
 
     console.log("Hello World! This is a Console Log.");
 
@@ -28,13 +28,13 @@
     <!--EXTRA CREDIT-->
     
     if (new Date().getHours() < 24) {
-  document.getElementById("timeofday").innerHTML = "Good Evening!";
+  document.getElementById("timeofday").innerHTML = "<h2>Good Evening!</h2>";
 }
 if (new Date().getHours() < 18) {
-  document.getElementById("timeofday").innerHTML = "Good Afternoon!";
+  document.getElementById("timeofday").innerHTML = "<h2>Good Afternoon!</h2>";
 }
 if (new Date().getHours() < 12) {
-  document.getElementById("timeofday").innerHTML = "Good Morning!";
+  document.getElementById("timeofday").innerHTML = "<h2>Good Morning!</h2>";
 }
 
 <!--console.log and Let Functions-->
