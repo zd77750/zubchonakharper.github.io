@@ -1,7 +1,9 @@
-document.getElementById("demo").innerHTML="This is Daniel Zubchonak's Assignemnt #2.";
+document.getElementById("demo").innerHTML="This is" + studentFullName + "'s Assignemnt #2.";
 
-const x = studentfName
-const y = studentlName
-let studentFullName = studentfName + studentlName
+const x = studentfName;
+x = "Daniel";
+const y = studentlName;
+y = "Zubchonak";
+let studentFullName = studentfName + studentlName;
 
-document.getElementById("intro").innerHTML="My Name is" + studentFullName + ".";
+document.getElementById("intro").innerHTML= "This is an Intro to Assignment #2";
