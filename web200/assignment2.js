@@ -9,7 +9,8 @@
 // The "var" here is set to welcome users to the website (end-users can also redeclarate this var):
  var welcomeClass = "You have entered WEB 200 at William Rainey Harper College"
  var welcomeMetallica = "You have entered the Sandman by Metallica, Join Us live at the Las Vegas Sphere!"
-// This is me hacking into the mainframe >:-)
+
+ // This is me hacking into the mainframe >:-)
  window.alert(welcomeMetallica)
 
  // The "const" remains unchanged, JavaScript identifies the First and Last name of student. 
@@ -23,4 +24,8 @@ document.getElementById("demo").innerHTML="This is " + studentFullName + "'s Ass
 
 document.getElementById("intro").innerHTML= studentFullName + "'s personal introduction to Assignment #2, blah blah blah, yaddah yaddah yaddah.";
 
-
+// The 
+document.write("Whatever you do, DO NOT TOUCH THE BUTTON")
+document.write("<br>")
+document.write("<button id='myButton'>Button</button>");
+document.getElementById("myButton").innerHTML = "James Hetfield is hiding under your bed, waiting for the Sandman to Enter the room. DO NOT PANIC."
