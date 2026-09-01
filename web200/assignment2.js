@@ -21,6 +21,6 @@ let studentFullName = studentfName + " " + studentlName;
  // JavaScript Data can be displayed using possibile outputs like the one below (.innerHTML allows user to identify; "id", the element and write text.)
 document.getElementById("demo").innerHTML="This is " + studentFullName + "'s Assignment #2.";
 
-document.getElementById("intro").innerHTML= studentFullName + "'s personal introduction to Assignment #2.";
+document.getElementById("intro").innerHTML= studentFullName + "'s personal introduction to Assignment #2, blah blah blah, yaddah yaddah yaddah.";
 
 
