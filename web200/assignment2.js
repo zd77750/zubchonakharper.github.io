@@ -24,11 +24,16 @@ document.getElementById("demo").innerHTML="This is " + studentFullName + "'s Ass
 
 document.getElementById("intro").innerHTML= studentFullName + "'s personal introduction to Assignment #2, blah blah blah, yaddah yaddah yaddah.";
 
-document.getElementById("bedTime").innerHTML= 
+if (new Date().getHours() < 21) {
+  document.getElementById("bedTime").innerHTML = "<h2>GO TO BED, OR ELSE JAMES HETFIELD WILL WATCH YOU SLEEP </h2>";
+}
+if (new Date().getHours() < 7) {
+  document.getElementById("bedTime").innerHTML = "<h2>GOOD DAY TO YOU! NO SIGHT OF JAMES HETFIELD</h2>";
+}
 // The Button of Despair
 document.write("Whatever you do, DO NOT TOUCH THE BUTTON")
 document.write("<br>")
 document.write("<button id='myButton'>Button</button>");
-document.getElementById("myButton").onclick = function() {
-    document.getElementById("myButton").innerHTML = "James Hetfield is hiding under your bed, waiting for the Sandman to Enter the room. DO NOT PANIC."
+document.getElementById('myButton').onclick = function() {
+    document.getElementById('myButton').innerHTML = "James Hetfield is hiding under your bed, waiting for the Sandman to Enter the room. DO NOT PANIC."
 }
