@@ -1,4 +1,4 @@
-document.getElementById("demo").innerHTML="This is" + studentFullName + "'s Assignemnt #2.";
+document.getElementById("demo").innerHTML="This is" + studentFullName + "'s Assignment #2.";
 
 const x = studentfName;
 x = "Daniel";
