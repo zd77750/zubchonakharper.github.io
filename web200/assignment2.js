@@ -24,8 +24,11 @@ document.getElementById("demo").innerHTML="This is " + studentFullName + "'s Ass
 
 document.getElementById("intro").innerHTML= studentFullName + "'s personal introduction to Assignment #2, blah blah blah, yaddah yaddah yaddah.";
 
-// The 
+document.getElementById("bedTime").innerHTML= 
+// The Button of Despair
 document.write("Whatever you do, DO NOT TOUCH THE BUTTON")
 document.write("<br>")
 document.write("<button id='myButton'>Button</button>");
-document.getElementById("myButton").innerHTML = "James Hetfield is hiding under your bed, waiting for the Sandman to Enter the room. DO NOT PANIC."
+document.getElementById("myButton").onclick = function() {
+    document.getElementById("myButton").innerHTML = "James Hetfield is hiding under your bed, waiting for the Sandman to Enter the room. DO NOT PANIC."
+}
