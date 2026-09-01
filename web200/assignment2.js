@@ -35,5 +35,5 @@ document.write("Whatever you do, DO NOT TOUCH THE BUTTON")
 document.write("<br>")
 document.write("<button id='myButton'>Button</button>");
 document.getElementById('myButton').onclick = function() {
-    document.getElementById('myButton').innerHTML = "James Hetfield is hiding under your bed, waiting for the Sandman to Enter the room. DO NOT PANIC."
+    document.getElementById('myButton').alert = "James Hetfield is hiding under your bed, waiting for the Sandman to Enter the room. DO NOT PANIC."
 }
