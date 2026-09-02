@@ -24,7 +24,9 @@ document.getElementById("demo").innerHTML="This is " + studentFullName + "'s Ass
 
 document.getElementById("intro").innerHTML= studentFullName + "'s personal introduction to Assignment #2, blah blah blah, yaddah yaddah yaddah.";
 
-// The Button of Despair
+document.getElementById("DoNotTouch").innerHTML= "Click this Button below to get a Free Ticket to Metallica!";
+
+// The Time and Button of Despair
 document.getElementById('myButton').onclick = function() {
     alert("James Hetfield is hiding under your bed, waiting for the Sandman to Enter the room. DO NOT PANIC.");
 }
