@@ -26,7 +26,7 @@ document.getElementById("intro").innerHTML= studentFullName + "'s personal intro
 
 // The Button of Despair
 document.getElementById('myButton').onclick = function() {
-    document.getElementById('myButton').alert = "James Hetfield is hiding under your bed, waiting for the Sandman to Enter the room. DO NOT PANIC."
+    alert("James Hetfield is hiding under your bed, waiting for the Sandman to Enter the room. DO NOT PANIC.");
 }
 
 if (new Date().getHours() < 21) {
