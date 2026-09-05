@@ -6,7 +6,7 @@
 "const" is another block scope, variable is set and cannot be updated by an end-user.
  */
 
-// The "var" here is set to welcome users to the website (end-users can also redeclarate this var):
+// The "var" here is set to welcome users to the website (end-users can also re-declarate this var):
  var welcomeClass = "You have entered WEB 200 at William Rainey Harper College"
  var welcomeMetallica = "You have entered the Sandman by Metallica, Join Us live at the Las Vegas Sphere!"
 
@@ -18,6 +18,17 @@
 const studentfName = "Daniel";
 const studentlName = "Zubchonak";
 let studentFullName = studentfName + " " + studentlName;
+
+// The "$" can also be used as a character as an identfier. 
+// It is also important that the boolean uses a function in order for true/false to work. (In this case it's strictly true).
+
+var $Student = true;
+
+function studentStatus() {
+    return $Student;
+}
+
+document.getElementById("studentEnroll").innerHTML = "This Student is currently enrolled in William Rainey Harper College.";
 
  // JavaScript Data can be displayed using possibile outputs like the one below (.innerHTML allows user to identify; "id", the element and write text.)
 document.getElementById("demo").innerHTML="This is " + studentFullName + "'s Assignment #2.";
