@@ -21,9 +21,9 @@ document.getElementById("function2").innerHTML = MultiplyFunction(15,6)
 
 
 //Function #3
-//Using the ARROW Expression results having an arrow replacing traditional equals sign for operation.
+//Using the ARROW Expression results having an "equal/arrow" replacing traditional "function/equals" sign for operation.
 
-let SubtractFunction = function(num1,num2) => {
+let SubtractFunction = (num1,num2) => {
     return num1 - num2;
 };
 
