@@ -27,4 +27,4 @@ let SubtractFunction = (num1,num2) => {
     return num1 - num2;
 };
 
-document.getElementById("function3").innerHTML = "The total of my Subtraction function is " + SubtractFunction(95-86);
+document.getElementById("function3").innerHTML = "The total of my Subtraction function is " + SubtractFunction(95,86);
