@@ -1,4 +1,4 @@
-//Function #1
+//Function #1 - Addition
 //Basic Function allows JS to return numbers using "id" and "innerHTML"
 
 function addFunction (num1, num2) {
@@ -9,7 +9,7 @@ document.getElementById("function1").innerHTML = "The total of my Addition funct
 
 
 
-//Function #2
+//Function #2 - Multiplication
 //**NOTICE** Semicolon (;) is including at the end of function ("{,}") due to "let" being present.
 
 let multiplyFunction = function(num1,num2){
@@ -20,7 +20,7 @@ document.getElementById("function2").innerHTML = "The total of my Multiplication
 
 
 
-//Function #3
+//Function #3 - Subtraction
 //Using the ARROW Expression results having an "equal/arrow" replacing traditional "function/equals" sign for operation.
 
 let subtractFunction = (num1,num2) => {
