@@ -39,7 +39,7 @@ document.getElementById("addButton").onclick = function() {
     let num2 = Number(document.getElementById("addNum2").value);
 
     document.getElementById("additionEC").innerHTML =
-        addNumbers(num1, num2);
+        addFunction(num1, num2);
 };
 
 
@@ -50,7 +50,7 @@ document.getElementById("multiplyButton").onclick = function() {
     let num2 = Number(document.getElementById("multiplyNum2").value);
 
     document.getElementById("multiplicationEC").innerHTML =
-        multiplyNumbers(num1, num2);
+        multiplyFunction(num1, num2);
 };
 
 
@@ -61,5 +61,5 @@ document.getElementById("subtractButton").onclick = function() {
     let num2 = Number(document.getElementById("subtractNum2").value);
 
     document.getElementById("subtractionEC").innerHTML =
-        subtractNumbers(num1, num2);
+        subtractFunction(num1, num2);
 };
