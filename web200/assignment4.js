@@ -5,7 +5,7 @@ function AddFunction (num1, num2) {
     return num1 + num2
 }
 
-document.getElementById("function1").innerHTML = AddFunction(5,8);
+document.getElementById("function1").innerHTML = "The total of my Addition function is" + AddFunction(5,8);
 
 
 
@@ -16,7 +16,7 @@ let MultiplyFunction = function(num1,num2){
     return num1 * num2;
 };
 
-document.getElementById("function2").innerHTML = MultiplyFunction(15,6)
+document.getElementById("function2").innerHTML = "The total of my Multipication function is" + MultiplyFunction(15,6)
 
 
 
@@ -27,4 +27,4 @@ let SubtractFunction = (num1,num2) => {
     return num1 - num2;
 };
 
-document.getElementById("function3").innerHTML = SubtractFunction(95-86);
+document.getElementById("function3").innerHTML = "The total of my Subtraction function is" + SubtractFunction(95-86);
