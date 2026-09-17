@@ -16,7 +16,7 @@ let MultiplyFunction = function(num1,num2){
     return num1 * num2;
 };
 
-document.getElementById("function2").innerHTML = "The total of my Multipication function is " + MultiplyFunction(15,6)
+document.getElementById("function2").innerHTML = "The total of my Multiplication function is " + MultiplyFunction(15,6)
 
 
 
@@ -28,3 +28,38 @@ let SubtractFunction = (num1,num2) => {
 };
 
 document.getElementById("function3").innerHTML = "The total of my Subtraction function is " + SubtractFunction(95,86);
+
+
+//**EXTRA CREDIT** - Custom Buttons
+
+// EXTRA CREDIT - Add button
+document.getElementById("addButton").onclick = function() {
+
+    let num1 = Number(document.getElementById("addNum1").value);
+    let num2 = Number(document.getElementById("addNum2").value);
+
+    document.getElementById("additionEC").innerHTML =
+        addNumbers(num1, num2);
+};
+
+
+// EXTRA CREDIT - Multiply button
+document.getElementById("multiplyButton").onclick = function() {
+
+    let num1 = Number(document.getElementById("multiplyNum1").value);
+    let num2 = Number(document.getElementById("multiplyNum2").value);
+
+    document.getElementById("multiplicationEC").innerHTML =
+        multiplyNumbers(num1, num2);
+};
+
+
+// EXTRA CREDIT - Subtract button
+document.getElementById("subtractButton").onclick = function() {
+
+    let num1 = Number(document.getElementById("subtractNum1").value);
+    let num2 = Number(document.getElementById("subtractNum2").value);
+
+    document.getElementById("subtractionEC").innerHTML =
+        subtractNumbers(num1, num2);
+};
