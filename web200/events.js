@@ -23,9 +23,13 @@ function keyPress(id) {
     "You have pressed a button";
 }
 
+document.getElementById("eventKeyPress").addEventListener("keyPress", function() {
+    keyPress(this);
+})
+
 //Event Joke #4 - Page Load Event
 
-function pageLoad (id) {
+function pageLoad () {
     document.getElementById("eventPageLoad").innerHTML = 
     '<img src="web200/welcome-to-internet.webp" alt="Assignment #5">';
 }
