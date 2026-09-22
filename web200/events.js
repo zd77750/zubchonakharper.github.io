@@ -5,5 +5,6 @@ function changeText(id) {
 }
 //Event Joke #2 - Mouse Over Event
 let eventJoke = "Jokes on you! The Mouse Over Event is the joke."
-function mouseOver(id) { document.getElementById = eventJoke;
+function mouseOver(id) { 
+    id.innerHTML = eventJoke;
 }
