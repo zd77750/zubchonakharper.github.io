@@ -12,7 +12,7 @@ function mouseOver(id) {
     id.style.color = "Red";
 }
 
-document.getElementById("eventJoke").addEventListener("mouseOver", function() {
+document.getElementById("eventJoke").addEventListener("mouseover", function() {
     mouseOver(this);
 })
 
@@ -23,7 +23,7 @@ function keyPress(id) {
     "You have pressed a button";
 }
 
-document.getElementById("eventKeyPress").addEventListener("keyPress", function() {
+document.getElementById("eventKeyPress").addEventListener("keypress", function() {
     keyPress(this);
 })
 
