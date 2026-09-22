@@ -16,6 +16,6 @@ function keyPress(id) {
 //Event Joke #4 - Page Load Event
 function pageLoad (id) {
     document.getElementById("eventPageLoad").innerHTML = 
-    '<img src="welcome-to-internet.webp" alt="Assignment #5">';
+    '<img src="web200/welcome-to-internet.webp" alt="Assignment #5">';
 }
 //*EXTRA CREDIT*
