@@ -15,6 +15,6 @@ function keyPress(id) {
 }
 //Event Joke #4 - Page Load Event
 function loadMessage (id) {
-    document.getElementById("eventKeyPress").innerHTML = "PAGE LOADED: Welcome to my Assignment #5. This is a Page Load Event example.";
+    document.getElementById("eventPageLoad").innerHTML = "PAGE LOADED: Welcome to my Assignment #5. This is a Page Load Event example.";
 }
 //*EXTRA CREDIT*
