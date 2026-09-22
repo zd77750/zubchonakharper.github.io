@@ -6,25 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB 200: Daniel Zubchonak- Assignment #5</title>
 </head>
+<!--Fig 2.1: See Page Load Event. Loads page from the body, not the <p> tags-->
 <body onload = "pageLoad()"> 
 <h1>WEB 200 - Assignment #5 (Events)</h1>
 <br>
-<!--Click Event-->
+<!--Fig 1.1 Click Event-->
 <h2>#1 - onClick Event</h2>
     <p onclick="changeText(this)">
         So just recently, I was able to come up with a brilliant idea for Assignment #5.
         <br>All it takes is just <u>one click on this sentence</u> and I'll tell you an interesting fact.
     </p>
 <br>
-<!--Mouse Over Event-->
+<!--Fig 1.2 Mouse Over Event-->
 <h2>#2 - mouseOver Event</h2>
     <p id="eventJoke" onmouseover="mouseOver(this)">I suppose you like jokes too?</p>
 <br>
-<!--Key Press Event-->
+<!-- Fig 1.3 Key Press Event-->
 <h2>#3 - Key Press Event</h2>
     <input id = "eventKeyPress" onkeypress="keyPress(this)" value = "I dare you to hit any key">
 <br>
-<!--Page Load Event: Look at Figure 4.1 for "onload" -->
+<!--Fig 1.4 Page Load Event: Look at Figure 2.1 for "onload"-->
 <h2>#4 - Page Load Event</h2>
     <p id = "eventPageLoad">This Page is Loading</p>
 </body>
