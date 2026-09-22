@@ -4,7 +4,6 @@ function changeText(id) {
     "<b>I dislocated my shoulder at the gym while doing dumbbell overhead presses using 50lb dumbbells. <br> Daniel is a dumbbell himself...</b>";
 }
 //Event Joke #2 - Mouse Over Event
-let eventJoke = "Jokes on you! The Mouse Over Event is the joke."
 function mouseOver(id) { 
-    id.innerHTML = eventJoke;
+    id.innerHTML = "Jokes on you! The Mouse Over Event is the joke.";
 }
