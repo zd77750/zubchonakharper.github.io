@@ -31,7 +31,7 @@ document.getElementById("eventKeyPress").addEventListener("keypress", function()
 
 function pageLoad () {
     document.getElementById("eventPageLoad").innerHTML = 
-    '<img src="web200/welcome-to-internet.webp" alt="Assignment #5">';
+    '<img src="welcome-to-internet.webp" alt="Assignment #5">';
 }
 
 //*EXTRA CREDIT*
