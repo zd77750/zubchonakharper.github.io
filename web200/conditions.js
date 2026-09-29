@@ -38,10 +38,10 @@ document.getElementById("checkButton").addEventListener("click", function() {
 
         case "UI/UX Design":
             document.getElementById("answer3").innerHTML = "Correct";
-    
+        break;
         case "":
             document.getElementById("answer3").innerHTML = "Choose Your Answer";
-        
+        break;
         default:
             document.getElementById("answer3").innerHTML = "Try Again";
         }
