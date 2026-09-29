@@ -9,12 +9,13 @@ document.getElementById("checkButton").addEventListener("click", function() {
     let answer3 = document.getElementById("answer3").value;
 
 //STEP #3: Create questions with proper value types when executing. using === helps find the exact absolute value.
-//**NOTICE** - The blank "" marks is important because they are also identifiable (Means User entered an empty value).
+//**NOTICE Fig 3.1** - The blank "" marks is important because they are also identifiable (Means User entered an empty value).
 
     //Question #1 - What does HTML stand for? (IF/ELSE IF/ELSE)
     if (answer1 === "Hypertext Markup Language"){
         document.getElementById("answer1").innerHTML = "Correct";
-    }   
+    } 
+    //**Fig 3.1  
     else if (answer1 === ""){
         document.getElementById("answer1").innerHTML = "Choose Your Answer";
     }
