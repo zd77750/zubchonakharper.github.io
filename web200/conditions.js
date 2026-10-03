@@ -4,9 +4,9 @@ document.getElementById("checkButton").addEventListener("click", function() {
 
 //STEP #2: In order to retrieve the proper data, I used id tags to correspond to each question and set values using conditional statements on the HTML.
 
-    let answer1 = document.getElementById("answer1").value;
-    let answer2 = document.getElementById("answer2").value;
-    let answer3 = document.getElementById("answer3").value;
+    let answer1 = document.getElementById("question1").value;
+    let answer2 = document.getElementById("question2").value;
+    let answer3 = document.getElementById("question3").value;
 
 //STEP #3: Create questions with proper value types when executing. using === helps find the exact absolute value.
 //**NOTICE Fig 3.1** - The blank "" marks is important because they are also identifiable (Means User entered an empty value).
