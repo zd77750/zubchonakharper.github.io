@@ -5,10 +5,10 @@ function generateTable() {
     let number = 1;
     let result = "";
 
-//While allows me to setup a table that can go up to 12.
+//"While" allows me to setup a table that can go up to 12.
     while (number <= 12) {
 
-//Continue Skips the number 8 in the multiplication table, Continue allows the system to skip the code and not display "7x5=35".
+//Continue Skips the number 8 in the multiplication table, "Continue" allows the system to skip the code and not display "8x5=40".
         if (number === 8) {
             number++;
             continue;
