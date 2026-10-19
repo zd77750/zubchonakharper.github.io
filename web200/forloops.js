@@ -1,4 +1,4 @@
-//STANDARD LOOP: iterate list of products using CONST
+//STANDARD LOOP: iterate list of products using CONST (NOTICE have to use "[,]" to define my array.)
 const sneakers = [
     "Nike SB Janoski",
     "Adidas Jermey Scott Superstar",
