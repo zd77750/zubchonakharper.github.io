@@ -4,7 +4,7 @@ const sneakers = {
     "Adidas Jermey Scott Superstar",
     "New Balance 9060",
     "Air Jordan Retro 5 Chinese New Year",
-    "VANS Old Skool Burgundy"
+    "VANS Old Skool Burgundy",
 };
 //STANDARD LOOP: using "let sneakerOutput" to display list of items.
 let sneakerOutput = "";
