@@ -13,4 +13,4 @@ for (let i=0; i < sneakers.length; i++) {
     sneakerOutput += "<li>" + sneakers[i] + "</li>";
 }
 //STANDARD LOOP: used to display results on HTML
-document.getElementById("sneakerList").innerHTML = sneakerOutput
+document.getElementById("sneakerList").innerHTML = sneakerOutput;
