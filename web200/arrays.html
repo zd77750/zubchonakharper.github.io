@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- WEB 200: Daniel Zubchonak - Week 8-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB 200: Daniel Zubchonak- Assignment #9</title>
+</head>
+<body>
+
+<h1>Assignment #9 - Arrays</h1>
+
+<h2>German Car Manufacturer List Manager</h2>
+<p>Add, remove, sort, and search for different car manufacturers using JavaScript Arrays.</p>
+<hr>
+
+<!-- STEP 1: Display Current Array: Using div tag to retrieve carList from arrays.js file -->
+<h3>German Car Manufacturers</h3>
+
+    <ul id="carList"></ul>
+
+    <br>
+
+<!-- STEP 2: Add Item (Push Array Method) -->
+    <h3>#1 - Add a Manufacturer</h3>
+
+    <input type="text" id="addCar" placeholder="Enter Manufacturer">
+
+    <button onclick="addManufacturer()">Add Manufacturer</button>
+
+
+<!-- STEP 3: Remove Item (Pop Array Method)-->
+    <h3>#2 - Remove a Manufacturer</h3>
+
+    <input type="text" id="removeCar" placeholder="Enter Manufacturer">
+
+    <button onclick="removeManufacturer()">Remove Manufacturer</button>
+
+    <hr>
+
+<!-- STEP #4: Sort Array (Sort Array Method)-->
+    <h3>#3 - Sort Manufacturers</h3>
+
+    <button onclick="sortManufacturers()">Sort Alphabetically</button>
+
+    <hr>
+
+<!-- STEP 5: Search Array (Find Array Method) -->
+    <h3>#4 - Search for a Manufacturer (Extra Credit)</h3>
+
+    <input type="text" id="searchCar" placeholder="Search Manufacturer">
+
+    <button onclick="searchManufacturer()">Search</button>
+
+    <p id="searchResult"></p>
+
+    <hr>
+
+<!-- STEP 6: Status Message (Used to display Feedback using Array Methods) -->
+    <p id="message"></p>
+
+<script src="arrays.js"></script>
+</body>
+</html>
