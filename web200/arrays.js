@@ -27,23 +27,19 @@ function addManufacturer() {
     let newCar = document.getElementById("addCar").value.trim();
 
     if (newCar !== "") {
-
+    
         cars.push(newCar);
+    displayCars();
 
-        displayCars();
+    document.getElementById("message").textContent =
+    newCar + " was successfully added!";
 
-        document.getElementById("message").textContent =
-            newCar + " was successfully added!";
-
-        document.getElementById("addCar").value = "";
-
-    } else {
-
+    document.getElementById("addCar").value = "";
+    } 
+    else {
         document.getElementById("message").textContent =
             "Please enter a manufacturer!";
-
     }
-
 }
 
 //STEP 4: Clearing the previous element on the list (Pop Array Method)
