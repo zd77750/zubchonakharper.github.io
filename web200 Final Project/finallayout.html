@@ -4,11 +4,219 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEB 200 - Daniel Zubchonak's Pizza Website (Final Layout)</title>
-</head>
-<body>
+    <title>WEB 200: Daniel's Pizza Shop (Final Layout)</title>
 
-    
-<script src="finallayout.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff5e6;
+            color: #222222;
+            max-width: 750px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #800000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        fieldset, #orderDetails {
+            background-color: white;
+            border: 1px solid #800000;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .customerField {
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #800000;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Daniel's Pizza</h1>
+        <p>Build your pizza, your way!</p>
+    </header>
+
+    <main>
+        <h2>Create Your Order</h2>
+        <p>School project demo. No real order will be sent.</p>
+
+        <form id="pizzaForm">
+            <!-- Matching names allow only one size to be selected. -->
+            <fieldset>
+                <legend>1. Choose Your Pizza Size</legend>
+
+                <label>
+                    <input type="radio" name="size"
+                           value="Small" checked>
+                    Small - $8.00
+                </label>
+
+                <label>
+                    <input type="radio" name="size" value="Medium">
+                    Medium - $10.00
+                </label>
+
+                <label>
+                    <input type="radio" name="size" value="Large">
+                    Large - $12.00
+                </label>
+
+                <label>
+                    <input type="radio" name="size" value="XL">
+                    Extra Large - $14.00
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>2. Choose Your Crust</legend>
+
+                <label>
+                    <input type="radio" name="crust"
+                           value="Thin" checked>
+                    Thin - Included
+                </label>
+
+                <label>
+                    <input type="radio" name="crust" value="Pan">
+                    Pan - Add $2.00
+                </label>
+
+                <label>
+                    <input type="radio" name="crust" value="Stuffed">
+                    Stuffed - Add $3.00
+                </label>
+            </fieldset>
+
+            <!-- Checkboxes allow multiple selections. -->
+            <fieldset>
+                <legend>3. Choose Your Toppings</legend>
+                <p>Each topping costs $1.00 per pizza.
+                   Regular cheese is included.</p>
+
+                <label>
+                    <input type="checkbox" name="topping"
+                           value="Extra Cheese">
+                    Extra Cheese
+                </label>
+
+                <label>
+                    <input type="checkbox" name="topping"
+                           value="Pepperoni">
+                    Pepperoni
+                </label>
+
+                <label>
+                    <input type="checkbox" name="topping"
+                           value="Sausage">
+                    Sausage
+                </label>
+
+                <label>
+                    <input type="checkbox" name="topping"
+                           value="Chicken">
+                    Chicken
+                </label>
+
+                <label>
+                    <input type="checkbox" name="topping"
+                           value="Bacon">
+                    Bacon
+                </label>
+
+                <label>
+                    <input type="checkbox" name="topping"
+                           value="Anchovies">
+                    Anchovies
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>4. Number of Pizzas</legend>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity"
+                       min="1" max="10" value="1" required>
+
+                <p>All pizzas will use the same selections.</p>
+            </fieldset>
+
+            <fieldset>
+                <legend>5. Customer Information</legend>
+
+                <label for="customerName">
+                    Name:
+                    <input class="customerField" type="text"
+                           id="customerName" name="customerName"
+                           autocomplete="name" required>
+                </label>
+
+                <label for="email">
+                    Email:
+                    <input class="customerField" type="email"
+                           id="email" name="email"
+                           autocomplete="email" required>
+                </label>
+
+                <label for="phone">
+                    Phone:
+                    <input class="customerField" type="tel"
+                           id="phone" name="phone"
+                           autocomplete="tel" required>
+                </label>
+
+                <label for="address">
+                    Address:
+                    <input class="customerField" type="text"
+                           id="address" name="address"
+                           autocomplete="street-address" required>
+                </label>
+
+                <label for="notes">
+                    Special Instructions:
+                    <textarea class="customerField" id="notes"
+                              name="notes" rows="4"
+                              placeholder="Optional notes"></textarea>
+                </label>
+            </fieldset>
+
+            <section id="orderDetails" aria-live="polite">
+                <h2>Order Details</h2>
+                <div id="orderSummary"></div>
+            </section>
+
+            <button type="submit">Review Demo Order</button>
+            <p id="orderMessage" role="status"></p>
+        </form>
+    </main>
+
+    <script src="finallayout.js"></script>
 </body>
 </html>
