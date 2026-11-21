@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WEB 200: Forms Assignment</title>
+
+    <!-- Style the form, the red error messages, and the green success message. -->
+    <style>
+    input, small {
+        display: block;
+    }
+
+    .field {
+        margin-bottom: 12px;
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Registration Form</h1>
+        <p>All fields are required. Use sample information for this class demo.</p>
+
+        <!-- "novalidate" lets JavaScript show our own errors under each field. -->
+        <form id="registration-form" method="post" novalidate>
+
+            <!-- First name. The label's "for" matches the input's "id". -->
+            <div class="field">
+                <label for="first-name">First name</label>
+                <input id="first-name" type="text" placeholder="John"
+                    autocomplete="given-name" aria-describedby="first-name-error" required>
+
+                <!-- JavaScript puts the error here. "aria-live" helps screen readers announce it. -->
+                <small id="first-name-error" class="error" aria-live="polite"></small>
+            </div>
+
+            <!-- Last name. "required" means this field must have a value. -->
+            <div class="field">
+                <label for="last-name">Last name</label>
+                <input id="last-name" type="text" placeholder="Smith"
+                    autocomplete="family-name" aria-describedby="last-name-error" required>
+                <small id="last-name-error" class="error" aria-live="polite"></small>
+            </div>
+
+            <!-- Phone number. The pattern expects 3 digits, 3 digits, then 4 digits.
+                 Each "-?" means the dash at that spot is optional. -->
+            <div class="field">
+                <label for="phone">Phone number</label>
+                <input id="phone" type="tel" placeholder="123-456-7890"
+                    autocomplete="tel-national" aria-describedby="phone-error"
+                    pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" required>
+                <small id="phone-error" class="error" aria-live="polite"></small>
+            </div>
+
+            <!-- Email. "type=email" lets the browser check the format. -->
+            <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="daniel@example.com" required>
+
+            <!-- JavaScript puts the email error in this paragraph. -->
+                <p id="email-error"></p>
+            </div>
+
+            <!-- Street address. The placeholder shows an example before you type. -->
+            <div class="field">
+                <label for="address">Street address</label>
+                <input id="address" type="text" placeholder="123 Main St"
+                    autocomplete="street-address" aria-describedby="address-error" required>
+                <small id="address-error" class="error" aria-live="polite"></small>
+            </div>
+
+            <!-- Password. HTML sets the minimum length. JavaScript checks the character types. -->
+            <div class="field">
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Enter a practice password"
+                    autocomplete="new-password" aria-describedby="password-error password-hint"
+                    minlength="8" required>
+                <small id="password-hint" class="hint">
+                    Use 8 or more characters, including an uppercase letter,
+                    a lowercase letter, a number, and a symbol.
+                </small>
+                <small id="password-error" class="error" aria-live="polite"></small>
+            </div>
+
+            <!-- Confirm password. JavaScript compares this value with the first password. -->
+            <div class="field">
+                <label for="confirm-password">Confirm password</label>
+                <input id="confirm-password" type="password" placeholder="Re-enter the same password"
+                    autocomplete="new-password" aria-describedby="confirm-password-error" required>
+                <small id="confirm-password-error" class="error" aria-live="polite"></small>
+            </div>
+
+            <!-- JavaScript enables this button once the form checks are ready. -->
+            <button type="submit" disabled>Register</button>
+        </form>
+
+        <!-- JavaScript fills in this paragraph only when all seven fields pass. -->
+        <p id="success" role="status"></p>
+        <script src="forms.js"></script>
+    </main>
+</body>
+</html>
