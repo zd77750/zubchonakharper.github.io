@@ -1,10 +1,9 @@
-// DOM: Find the HTML elements this script needs.
 const form = document.getElementById("registration-form");
+const success = document.getElementById("success");
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirm-password");
-const success = document.getElementById("success");
 
-// Arrays and objects: Each object stores an input ID and its required message.
+// Each object stores an input ID and the message to show if it is empty.
 const fields = [
     { id: "first-name", requiredMessage: "Enter your first name." },
     { id: "last-name", requiredMessage: "Enter your last name." },
@@ -15,41 +14,42 @@ const fields = [
     { id: "confirm-password", requiredMessage: "Re-enter your password." }
 ];
 
-// FUNCTION 1: Check one input and return the first error found.
-// An empty string means it passed all its checks.
+// FUNCTION 1: Check one input.
+// Return an error message if a rule fails. Return "" if it passes.
 function getError(input, requiredMessage) {
+    // trim() also catches fields that contain only spaces.
     if (input.validity.valueMissing || input.value.trim() === "") {
         return requiredMessage;
     }
 
-    // Constraint Validation API: Ask the browser which HTML rule failed.
+    // The browser gets these rules from type="email" and pattern in the HTML.
     if (input.validity.typeMismatch) {
         return "Enter an email like daniel@example.com.";
     }
 
     if (input.validity.patternMismatch) {
-        return "Enter a phone number in this format: 847-555-0134.";
+        return "Use this phone format: 847-555-0134.";
     }
 
     if (input === password) {
         const value = input.value;
 
-        // Read the minimum length from the HTML.
         if (value.length < input.minLength) {
             return "Use at least " + input.minLength + " characters.";
         }
 
-        // test() asks if the password contains each required character type.
+        // Each test checks for one required character type.
         const hasUppercase = /[A-Z]/.test(value);
         const hasLowercase = /[a-z]/.test(value);
         const hasNumber = /[0-9]/.test(value);
         const hasSymbol = /[!@#$%^&*]/.test(value);
 
         if (!hasUppercase || !hasLowercase || !hasNumber || !hasSymbol) {
-            return "Use an uppercase letter, a lowercase letter, a number, and a symbol (!@#$%^&*).";
+            return "Include an uppercase letter, a lowercase letter, a number, and a symbol from !@#$%^&*.";
         }
     }
 
+    // Compare the two passwords exactly as typed.
     if (input === confirmPassword && input.value !== password.value) {
         return "The passwords must match.";
     }
@@ -57,53 +57,41 @@ function getError(input, requiredMessage) {
     return "";
 }
 
-// FUNCTION 2: Run when the form is submitted.
-// Check every input, display its message, and show success only if all inputs pass.
+// FUNCTION 2: Check all seven inputs when the user submits the form.
 function validateForm(event) {
     event.preventDefault();
     success.textContent = "";
 
-    let firstInvalidInput = null;
+    let allValid = true;
 
-    // A for loop visits each object in the fields array.
     for (let i = 0; i < fields.length; i++) {
         const field = fields[i];
         const input = document.getElementById(field.id);
         const error = document.getElementById(field.id + "-error");
 
-        // Set the current error. If getError returns "", this clears an old error.
+        // An empty message clears any custom error from a previous attempt.
         input.setCustomValidity(getError(input, field.requiredMessage));
 
-        // checkValidity returns true or false. Write the message under the input.
         if (input.checkValidity()) {
             error.textContent = "";
-            input.removeAttribute("aria-invalid");
         } else {
             error.textContent = input.validationMessage;
-            input.setAttribute("aria-invalid", "true");
-
-            // Remember the first invalid input and keep checking the rest.
-            if (firstInvalidInput === null) {
-                firstInvalidInput = input;
-            }
+            allValid = false;
         }
     }
 
-    if (firstInvalidInput !== null) {
-        firstInvalidInput.focus();
-        return;
+    // Only show success after every field passes.
+    if (allValid) {
+        form.reset();
+        success.textContent = "Registration successful!";
     }
-
-    form.reset();
-    success.textContent = "Registration successful!";
 }
 
-// FUNCTION 3: Remove the old success message when the user starts typing again.
+// FUNCTION 3: Clear the previous success message when typing starts again.
 function clearSuccess() {
     success.textContent = "";
 }
 
-// Events: Connect the functions to submit and input actions.
+// Connect the functions to the form's submit and input events.
 form.addEventListener("submit", validateForm);
 form.addEventListener("input", clearSuccess);
-document.getElementById("register-button").disabled = false;
